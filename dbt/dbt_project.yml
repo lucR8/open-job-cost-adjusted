@@ -1,0 +1,14 @@
+﻿name: job_cost_adjusted
+version: 1.0.0
+config-version: 2
+profile: job_cost_adjusted
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target","dbt_packages"]
+models:
+  job_cost_adjusted:
+    +materialized: view
+    staging:
+      +schema: staging
+    marts:
+      +schema: marts

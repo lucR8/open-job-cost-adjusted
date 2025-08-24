@@ -1,0 +1,12 @@
+﻿version: 2
+models:
+  - name: stg_offers
+    description: "Offres d'emploi (staging)"
+    columns:
+      - name: dummy_id
+        tests: [not_null]
+  - name: fct_offer_enriched
+    description: "Offres enrichies coût de la vie"
+    columns:
+      - name: offer_id
+        tests: [not_null, unique]

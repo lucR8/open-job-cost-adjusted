@@ -1,0 +1,29 @@
+﻿# Python
+__pycache__/
+.venv/
+.mypy_cache/
+.pytest_cache/
+*.pyc
+*.pyo
+
+# Env & local
+.env
+.DS_Store
+
+# dbt
+dbt/target/
+dbt/logs/
+
+# Airflow
+airflow/logs/
+airflow/airflow.db
+airflow/unittests.db
+
+# Data
+data/**/*.parquet
+data/**/*.csv
+data/**/*.json
+
+# IDE
+.idea/
+.vscode/
