@@ -1,29 +1,24 @@
 ﻿# Python
 __pycache__/
-.venv/
-.mypy_cache/
-.pytest_cache/
 *.pyc
-*.pyo
-
-# Env & local
-.env
-.DS_Store
-
-# dbt
-dbt/target/
-dbt/logs/
+.venv/
+venv/
 
 # Airflow
 airflow/logs/
-airflow/airflow.db
-airflow/unittests.db
+airflow/*.db
 
-# Data
-data/**/*.parquet
-data/**/*.csv
-data/**/*.json
+# dbt
+dbt/target/
+dbt/dbt_packages/
 
-# IDE
-.idea/
+# Docker / secrets
+.env
+**/.env
+**/.env.*
+
+# IDE / OS
 .vscode/
+.idea/
+.DS_Store
+Thumbs.db

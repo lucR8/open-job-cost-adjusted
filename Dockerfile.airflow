@@ -1,6 +1,5 @@
 ﻿FROM apache/airflow:2.9.3-python3.12
 USER root
-RUN mkdir -p /opt/airflow/.local && chown -R airflow:airflow /opt/airflow
+RUN pip install --no-cache-dir dbt-core==1.8.2 dbt-postgres==1.8.2 python-dotenv==1.0.1 pydantic==2.8.2
 USER airflow
-COPY requirements-airflow.txt /opt/airflow/requirements.txt
-RUN pip install --no-cache-dir -r /opt/airflow/requirements.txt
+ENV PYTHONPATH="/opt/airflow:/opt/airflow/src:/opt/dbt:${PYTHONPATH}"
